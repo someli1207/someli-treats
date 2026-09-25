@@ -1,0 +1,1707 @@
+/* ================================
+   SOMELI TREATS — MAIN STYLE
+   PART 1
+================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #fff9f7;
+  color: #4b302c;
+  line-height: 1.5;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+  width: 100%;
+  min-height: 68px;
+  padding: 12px 6%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(90, 45, 45, 0.08);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #6b4038;
+}
+
+.cart-button {
+  background: #e78b9d;
+  color: white;
+  padding: 10px 17px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(231, 139, 157, 0.25);
+  transition: 0.2s ease;
+}
+
+.cart-button:hover {
+  transform: translateY(-2px);
+}
+
+#cartCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 21px;
+  height: 21px;
+  margin-left: 5px;
+  padding: 0 5px;
+  background: white;
+  color: #c9687d;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+  min-height: 430px;
+  padding: 70px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(circle at top left, #ffe3e9 0%, transparent 35%),
+    radial-gradient(circle at bottom right, #ffeeda 0%, transparent 35%),
+    #fff4f1;
+}
+
+.hero-content {
+  max-width: 650px;
+}
+
+.small-title {
+  margin-bottom: 12px;
+  color: #bd6b7d;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin-bottom: 15px;
+  color: #583631;
+  font-family: Georgia, serif;
+  font-size: clamp(40px, 8vw, 70px);
+  line-height: 1.05;
+}
+
+.hero p:not(.small-title) {
+  margin: 0 auto 25px;
+  max-width: 500px;
+  color: #765a55;
+  font-size: 16px;
+}
+
+.hero button {
+  padding: 13px 25px;
+  background: #d9788c;
+  color: white;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(217, 120, 140, 0.25);
+  transition: 0.2s ease;
+}
+
+.hero button:hover {
+  transform: translateY(-2px);
+}
+/* ================================
+   MENU SECTION
+================================ */
+
+.menu-section {
+  padding: 55px 5%;
+  background: #fff9f7;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-heading h2 {
+  color: #583631;
+  font-family: Georgia, serif;
+  font-size: 34px;
+  margin-bottom: 7px;
+}
+
+.section-heading p {
+  color: #8a6b65;
+  font-size: 14px;
+}
+
+
+/* ================================
+   CATEGORY TITLE
+================================ */
+
+.category-title {
+  margin: 35px 0 18px;
+  color: #6b4038;
+  font-family: Georgia, serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.category-title:first-child {
+  margin-top: 0;
+}
+
+
+/* ================================
+   PRODUCT GRID
+================================ */
+
+.product-grid {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+
+/* ================================
+   PRODUCT CARD
+================================ */
+
+.product-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #f3dfda;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(88, 54, 49, 0.07);
+  transition: 0.25s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(88, 54, 49, 0.12);
+}
+
+
+/* ================================
+   PRODUCT IMAGE
+================================ */
+
+.product-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  background: #fff1ed;
+}
+
+
+/* ================================
+   PRODUCT INFO
+================================ */
+
+.product-info {
+  padding: 14px;
+}
+
+.product-info h3 {
+  margin-bottom: 5px;
+  color: #593a35;
+  font-size: 17px;
+}
+
+.product-info p {
+  margin-bottom: 12px;
+  color: #92736c;
+  font-size: 12px;
+}
+
+
+/* ================================
+   PRICE + CART BUTTON
+================================ */
+
+.product-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.product-price {
+  color: #bd6176;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.add-cart-btn {
+  padding: 9px 12px;
+  background: #d9788c;
+  color: #ffffff;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(217, 120, 140, 0.2);
+  transition: 0.2s ease;
+}
+
+.add-cart-btn:hover {
+  background: #c9687d;
+  transform: translateY(-1px);
+}
+
+.add-cart-btn:active {
+  transform: scale(0.96);
+}
+
+
+/* ================================
+   DESKTOP MENU
+================================ */
+
+@media (min-width: 768px) {
+
+  .product-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .product-card img {
+    height: 210px;
+  }
+
+  .menu-section {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+}
+/* ================================
+   CART OVERLAY
+================================ */
+
+#cartOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(58, 34, 30, 0.45);
+  display: none;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0;
+}
+
+#cartOverlay.active {
+  display: flex;
+}
+
+.cart-box {
+  width: 100%;
+  max-width: 600px;
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 22px;
+  background: #fffaf8;
+  border-radius: 25px 25px 0 0;
+  box-shadow: 0 -10px 35px rgba(60, 35, 30, 0.18);
+  animation: cartUp 0.25s ease;
+}
+
+@keyframes cartUp {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+
+/* ================================
+   CART HEADER
+================================ */
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f1ddd8;
+}
+
+.cart-header h2 {
+  color: #583631;
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+
+.close-cart {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #f8e3df;
+  color: #70473f;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+/* ================================
+   CART ITEMS
+================================ */
+
+#cartItems {
+  padding: 12px 0;
+}
+
+.cart-item {
+  margin-bottom: 12px;
+  padding: 14px;
+  background: #ffffff;
+  border: 1px solid #f1dfda;
+  border-radius: 15px;
+}
+
+.cart-item-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cart-item-name {
+  color: #593a35;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cart-item-price {
+  margin-top: 3px;
+  color: #98756d;
+  font-size: 12px;
+}
+
+.cart-item-top > strong {
+  color: #bd6176;
+  font-size: 15px;
+}
+
+
+/* ================================
+   QUANTITY CONTROLS
+================================ */
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.quantity-controls button {
+  min-width: 32px;
+  min-height: 30px;
+  padding: 5px 9px;
+  background: #f7dce1;
+  color: #70413d;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.quantity-controls button:hover {
+  background: #efc8d0;
+}
+
+.quantity-controls strong {
+  min-width: 20px;
+  text-align: center;
+  color: #583631;
+}
+
+.quantity-controls button:last-child {
+  margin-left: auto;
+  background: transparent;
+  color: #c9687d;
+  font-size: 12px;
+}
+
+
+/* ================================
+   EMPTY CART
+================================ */
+
+.empty-cart {
+  padding: 35px 15px;
+  text-align: center;
+}
+
+.empty-cart h3 {
+  margin: 8px 0 4px;
+  color: #583631;
+  font-family: Georgia, serif;
+}
+
+.empty-cart p {
+  color: #92736c;
+  font-size: 13px;
+}
+
+
+/* ================================
+   CART SUMMARY
+================================ */
+
+.cart-summary {
+  margin-top: 10px;
+  padding: 17px;
+  background: #fff0ed;
+  border-radius: 15px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #765650;
+  font-size: 14px;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e8cfc9;
+  color: #583631;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+
+/* ================================
+   CHECKOUT BUTTON
+================================ */
+
+.checkout-btn {
+  width: 100%;
+  margin-top: 14px;
+  padding: 14px;
+  background: #d9788c;
+  color: white;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 800;
+  box-shadow: 0 6px 15px rgba(217, 120, 140, 0.22);
+  transition: 0.2s ease;
+}
+
+.checkout-btn:hover {
+  background: #c9687d;
+  transform: translateY(-1px);
+}
+
+
+/* ================================
+   CART MOBILE
+================================ */
+
+@media (min-width: 768px) {
+
+  #cartOverlay {
+    align-items: center;
+    padding: 25px;
+  }
+
+  .cart-box {
+    border-radius: 25px;
+    max-height: 85vh;
+  }
+}
+/* ================================
+   CHECKOUT SECTION
+================================ */
+
+#checkoutSection {
+  display: none;
+  padding: 45px 18px 60px;
+  background: #fff9f7;
+}
+
+#checkoutSection.active {
+  display: block;
+}
+
+.checkout-box {
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #f0ded9;
+  border-radius: 22px;
+  box-shadow: 0 8px 28px rgba(88, 54, 49, 0.08);
+}
+
+.checkout-box h2 {
+  margin-bottom: 5px;
+  color: #583631;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  text-align: center;
+}
+
+.checkout-subtitle {
+  margin-bottom: 25px;
+  color: #92736c;
+  font-size: 13px;
+  text-align: center;
+}
+
+
+/* ================================
+   FORM
+================================ */
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  color: #65443e;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea,
+.checkout-box input,
+.checkout-box textarea {
+  width: 100%;
+  padding: 13px 14px;
+  background: #fffaf8;
+  border: 1px solid #ead7d2;
+  border-radius: 12px;
+  outline: none;
+  color: #4b302c;
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.form-group textarea,
+.checkout-box textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.checkout-box input:focus,
+.checkout-box textarea:focus {
+  border-color: #d9788c;
+  box-shadow: 0 0 0 3px rgba(217, 120, 140, 0.10);
+}
+
+
+/* ================================
+   PAYMENT BOX
+================================ */
+
+.payment-box {
+  margin-top: 20px;
+  padding: 17px;
+  background: #fff2ef;
+  border: 1px solid #f1ddd8;
+  border-radius: 15px;
+}
+
+.payment-box h3 {
+  margin-bottom: 10px;
+  color: #583631;
+  font-size: 16px;
+}
+
+.payment-option {
+  padding: 11px 13px;
+  background: white;
+  border: 1px solid #ead7d2;
+  border-radius: 10px;
+  color: #765650;
+  font-size: 13px;
+}
+
+
+/* ================================
+   PLACE ORDER BUTTON
+================================ */
+
+.place-order-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  background: #d9788c;
+  color: #ffffff;
+  border-radius: 28px;
+  font-size: 16px;
+  font-weight: 800;
+  box-shadow: 0 7px 18px rgba(217, 120, 140, 0.25);
+  transition: 0.2s ease;
+}
+
+.place-order-btn:hover {
+  background: #c9687d;
+  transform: translateY(-2px);
+}
+
+.place-order-btn:active {
+  transform: scale(0.98);
+}
+
+
+/* ================================
+   CHECKOUT MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+  #checkoutSection {
+    padding: 30px 14px 45px;
+  }
+
+  .checkout-box {
+    padding: 20px 16px;
+    border-radius: 18px;
+  }
+
+  .checkout-box h2 {
+    font-size: 26px;
+  }
+}
+/* ================================
+   SUCCESS / ORDER CONFIRMATION
+================================ */
+
+.success-section {
+  display: none;
+  min-height: 75vh;
+  padding: 55px 18px;
+  background:
+    radial-gradient(circle at top left, #ffe2e8 0%, transparent 35%),
+    #fff9f7;
+}
+
+.success-section.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-box {
+  width: 100%;
+  max-width: 550px;
+  padding: 35px 25px;
+  background: #ffffff;
+  border: 1px solid #f0ded9;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(88, 54, 49, 0.10);
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff0ed;
+  border-radius: 50%;
+  font-size: 35px;
+}
+
+.success-box h1 {
+  margin-bottom: 8px;
+  color: #583631;
+  font-family: Georgia, serif;
+  font-size: 32px;
+}
+
+.success-box > p {
+  color: #92736c;
+  font-size: 14px;
+}
+
+
+/* ================================
+   ORDER NUMBER
+================================ */
+
+.order-number {
+  margin: 22px 0;
+  padding: 17px;
+  background: #fff2ef;
+  border: 1px dashed #dda0aa;
+  border-radius: 15px;
+}
+
+.order-number span {
+  display: block;
+  margin-bottom: 5px;
+  color: #92736c;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.order-number strong {
+  color: #bd6176;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.success-note {
+  margin-bottom: 20px;
+}
+
+
+/* ================================
+   WHATSAPP BUTTON
+================================ */
+
+.whatsapp-btn {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 14px;
+  background: #25d366;
+  color: #ffffff;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+}
+
+
+/* ================================
+   ORDER MORE BUTTON
+================================ */
+
+.success-box button:not(.whatsapp-btn) {
+  width: 100%;
+  padding: 13px;
+  background: #d9788c;
+  color: #ffffff;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+  padding: 30px 20px;
+  background: #583631;
+  color: #ffffff;
+  text-align: center;
+}
+
+footer p {
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+footer .footer-brand {
+  margin-bottom: 7px;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+footer .footer-small {
+  color: #e9c9c3;
+  font-size: 11px;
+}
+
+
+/* ================================
+   SMALL SCREEN
+================================ */
+
+@media (max-width: 480px) {
+
+  .success-box {
+    padding: 28px 18px;
+  }
+
+  .success-box h1 {
+    font-size: 28px;
+  }
+
+  .order-number strong {
+    font-size: 22px;
+  }
+}
+/* ================================
+   FINAL FINISHING TOUCHES
+================================ */
+
+::selection {
+  background: #f4cbd3;
+  color: #583631;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #d9788c;
+  outline-offset: 2px;
+}
+
+
+/* ================================
+   SMOOTH SCROLLBAR
+================================ */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff4f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e7a0ad;
+  border-radius: 10px;
+}
+
+
+/* ================================
+   MOBILE POLISH
+================================ */
+
+@media (max-width: 480px) {
+
+  .navbar {
+    min-height: 62px;
+    padding: 10px 4%;
+  }
+
+  .logo {
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+
+  .cart-button {
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 390px;
+    padding: 55px 18px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p:not(.small-title) {
+    font-size: 14px;
+  }
+
+  .menu-section {
+    padding: 40px 12px;
+  }
+
+  .section-heading h2 {
+    font-size: 29px;
+  }
+
+  .category-title {
+    font-size: 23px;
+    margin-top: 28px;
+  }
+
+  .product-grid {
+    gap: 12px;
+  }
+
+  .product-card {
+    border-radius: 15px;
+  }
+
+  .product-card img {
+    height: 145px;
+  }
+
+  .product-info {
+    padding: 11px;
+  }
+
+  .product-info h3 {
+    font-size: 15px;
+  }
+
+  .product-price {
+    font-size: 16px;
+  }
+
+  .add-cart-btn {
+    padding: 8px 9px;
+    font-size: 11px;
+  }
+}
+
+
+/* ================================
+   VERY SMALL PHONES
+================================ */
+
+@media (max-width: 360px) {
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 190px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
+/* BIG ADD TO CART BUTTON */
+
+.add-cart-btn {
+  min-width: 125px;
+  padding: 11px 16px;
+  background: linear-gradient(135deg, #df7f94, #c9687d);
+  color: #fff;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  box-shadow: 0 5px 14px rgba(201, 104, 125, 0.25);
+}
+
+.add-cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 17px rgba(201, 104, 125, 0.30);
+}
+/* BIG PROCEED TO CHECKOUT BUTTON */
+
+.checkout-btn {
+  min-height: 54px;
+  padding: 15px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+/* ================================
+   PAYMENT OPTIONS — SOMELI TREATS
+================================ */
+
+.payment-box {
+  margin-top: 22px;
+  padding: 18px;
+  background: #fff7f5;
+  border: 1px solid #f0d8d4;
+  border-radius: 18px;
+}
+
+.payment-box h3 {
+  margin-bottom: 4px;
+  color: #583631;
+  font-family: Georgia, serif;
+  font-size: 20px;
+}
+
+.payment-note {
+  margin-bottom: 14px;
+  color: #92736c;
+  font-size: 12px;
+}
+
+.payment-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px;
+  background: #ffffff;
+  border: 1.5px solid #ead9d5;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.payment-card:hover {
+  border-color: #df91a1;
+  transform: translateY(-1px);
+}
+
+.payment-card input {
+  width: 18px;
+  height: 18px;
+  accent-color: #d9788c;
+  flex-shrink: 0;
+}
+
+.payment-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff0ed;
+  border-radius: 12px;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.payment-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.payment-text strong {
+  color: #583631;
+  font-size: 14px;
+}
+
+.payment-text small {
+  color: #92736c;
+  font-size: 11px;
+}
+
+/* Selected payment option */
+
+.payment-card:has(input:checked) {
+  background: #fff0f3;
+  border-color: #d9788c;
+  box-shadow: 0 5px 14px rgba(217, 120, 140, 0.12);
+}
+
+.payment-card:has(input:checked) .payment-icon {
+  background: #f8d7df;
+}
+
+
+/* Bigger buttons */
+
+.add-cart-btn {
+  min-width: 125px;
+  padding: 11px 16px;
+  font-size: 14px;
+  font-weight: 800;
+  border-radius: 25px;
+}
+
+.checkout-btn {
+  min-height: 54px;
+  padding: 15px 20px;
+  font-size: 16px;
+  font-weight: 800;
+  border-radius: 30px;
+}
+/* ================================
+   FINAL BUTTON FIX
+================================ */
+
+.add-cart-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 14px;
+  margin-top: 8px;
+
+  background: linear-gradient(135deg, #df7f94, #c9687d);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 25px;
+
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+
+  box-shadow: 0 6px 14px rgba(201, 104, 125, 0.22);
+  transition: all 0.2s ease;
+}
+
+.add-cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(201, 104, 125, 0.28);
+}
+
+.add-cart-btn:active {
+  transform: scale(0.97);
+}
+
+
+/* PROCEED TO CHECKOUT */
+
+.checkout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 56px;
+  padding: 15px 20px;
+  margin-top: 16px;
+
+  background: linear-gradient(135deg, #df7f94, #c9687d);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 30px;
+
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+
+  box-shadow: 0 7px 18px rgba(201, 104, 125, 0.25);
+  transition: all 0.2s ease;
+}
+
+.checkout-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 21px rgba(201, 104, 125, 0.30);
+}
+
+.checkout-btn:active {
+  transform: scale(0.98);
+}
+/* PLACE ORDER BUTTON */
+
+.place-order-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 56px;
+  padding: 15px 20px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #df7f94, #c9687d);
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  box-shadow: 0 7px 18px rgba(201, 104, 125, 0.25);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.place-order-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 9px 21px rgba(201, 104, 125, 0.30);
+}
+
+.place-order-button:active {
+  transform: scale(0.98);
+}
+/* ================================
+   SOMELI MENU TITLE
+================================ */
+
+.menu-title {
+  text-align: center;
+  margin: 10px 0 28px;
+  color: #583631;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  position: relative;
+}
+
+.menu-title span {
+  display: inline-block;
+  position: relative;
+  padding: 0 18px;
+}
+
+.menu-title span::before,
+.menu-title span::after {
+  content: "♡";
+  color: #d9788c;
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-title span::before {
+  left: -2px;
+}
+
+.menu-title span::after {
+  right: -2px;
+}
+
+.menu-title small {
+  display: block;
+  margin-top: 7px;
+  color: #a47c78;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+@media (max-width: 480px) {
+  .menu-title {
+    font-size: 25px;
+    margin-bottom: 23px;
+  }
+
+  .menu-title small {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+  }
+}
+/* ================================
+   PREMIUM HERO — SOMELI TREATS
+================================ */
+
+.hero {
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
+  background:
+    radial-gradient(circle at top left, #fff1f3 0%, transparent 35%),
+    radial-gradient(circle at bottom right, #f9e5df 0%, transparent 35%),
+    #fff9f7;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "🍓";
+  position: absolute;
+  left: 8%;
+  top: 18%;
+  font-size: 34px;
+  opacity: 0.75;
+  transform: rotate(-15deg);
+}
+
+.hero::after {
+  content: "♡";
+  position: absolute;
+  right: 9%;
+  bottom: 18%;
+  font-size: 55px;
+  color: #e8a4b1;
+  opacity: 0.45;
+}
+
+.hero-content {
+  max-width: 650px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 7px 16px;
+  margin-bottom: 18px;
+  border: 1px solid #e8c5cc;
+  border-radius: 30px;
+  background: rgba(255,255,255,0.75);
+  color: #9b5c68;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.hero .small-title {
+  margin-bottom: 12px;
+  color: #b06b78;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 0;
+  color: #583631;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(42px, 9vw, 70px);
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.hero h1 span {
+  color: #d9788c;
+}
+
+.hero-description {
+  margin: 20px auto 25px;
+  color: #8d6b66;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-menu-btn,
+.hero-waffle-btn {
+  min-height: 48px;
+  padding: 12px 20px;
+  border-radius: 28px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.hero-menu-btn {
+  border: none;
+  color: white;
+  background: linear-gradient(135deg, #df7f94, #c9687d);
+  box-shadow: 0 7px 18px rgba(201,104,125,0.25);
+}
+
+.hero-waffle-btn {
+  border: 1.5px solid #e0b6be;
+  color: #70454d;
+  background: #ffffff;
+}
+
+.hero-menu-btn:hover,
+.hero-waffle-btn:hover {
+  transform: translateY(-2px);
+}
+
+.hero-note {
+  margin-top: 22px;
+  color: #a9827c;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+}
+
+@media (max-width: 480px) {
+
+  .hero {
+    min-height: 500px;
+    padding: 55px 18px;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+    margin: auto;
+  }
+
+  .hero-menu-btn,
+  .hero-waffle-btn {
+    width: 100%;
+  }
+
+  .hero::before {
+    left: 5%;
+    top: 13%;
+  }
+
+  .hero::after {
+    right: 5%;
+    bottom: 13%;
+  }
+}
+/* ================================
+   PREMIUM NAVBAR — SOMELI TREATS
+================================ */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 70px;
+  padding: 10px 7%;
+
+  background: rgba(255, 250, 248, 0.96);
+  border-bottom: 1px solid #f0dfe0;
+
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo span {
+  color: #583631;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.logo small {
+  margin-top: 4px;
+  color: #c9687d;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.nav-menu-btn,
+.cart-button {
+  min-height: 40px;
+  padding: 8px 14px;
+  border-radius: 22px;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.nav-menu-btn {
+  border: 1px solid #e6c6cc;
+  background: #fff;
+  color: #70454d;
+}
+
+.cart-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  background: #df7f94;
+  color: white;
+  box-shadow: 0 5px 12px rgba(201,104,125,0.2);
+}
+
+.cart-button b {
+  min-width: 19px;
+  height: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: white;
+  color: #c9687d;
+  font-size: 10px;
+}
+
+.nav-menu-btn:hover,
+.cart-button:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 9px 15px;
+    min-height: 62px;
+  }
+
+  .logo span {
+    font-size: 17px;
+    letter-spacing: 1.5px;
+  }
+
+  .logo small {
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .nav-menu-btn,
+  .cart-button {
+    min-height: 38px;
+    padding: 7px 11px;
+    font-size: 12px;
+  }
+}
+/* ================================
+   PREMIUM FOOTER — SOMELI TREATS
+================================ */
+
+.site-footer {
+  margin-top: 60px;
+  padding: 48px 20px 25px;
+  text-align: center;
+  background: linear-gradient(180deg, #fff7f5, #fbecef);
+  border-top: 1px solid #f0d9dc;
+}
+
+.footer-logo {
+  color: #583631;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.footer-tagline {
+  margin: 8px 0 20px;
+  color: #c9687d;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.footer-divider {
+  width: 70px;
+  height: 2px;
+  margin: 0 auto 20px;
+  background: #df9aa8;
+  border-radius: 10px;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: #765953;
+  font-size: 12px;
+}
+
+.footer-info span {
+  padding: 8px 12px;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid #efdadd;
+  border-radius: 20px;
+}
+
+.footer-note {
+  margin: 22px auto 16px;
+  max-width: 360px;
+  color: #967873;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.footer-copy {
+  margin: 0;
+  color: #ad8b86;
+  font-size: 10px;
+}
+
+@media (max-width: 480px) {
+
+  .site-footer {
+    padding: 40px 15px 22px;
+  }
+
+  .footer-logo {
+    font-size: 21px;
+  }
+
+  .footer-info {
+    gap: 7px;
+  }
+
+  .footer-info span {
+    font-size: 11px;
+    padding: 7px 9px;
+  }
+}

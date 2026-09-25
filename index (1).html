@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>SOMELI TREATS</title>
+
+<link rel="stylesheet"
+href="style.css">
+
+</head>
+
+<body>
+  <<!-- NAVBAR -->
+
+<nav class="navbar">
+
+  <div class="logo">
+    <span>SOMELI</span>
+    <small>TREATS</small>
+  </div>
+
+  <div class="nav-right">
+
+    <button
+      onclick="scrollToMenu()"
+      class="nav-menu-btn">
+      Menu
+    </button>
+
+    <button
+      onclick="openCart()"
+      class="cart-button">
+      🛒
+      <span>Cart</span>
+      <b id="cartCount">0</b>
+    </button>
+
+  </div>
+
+</nav>
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-badge">
+      ♡ SOMELI TREATS ♡
+    </div>
+
+    <p class="small-title">
+      HOMEMADE • FRESH • 100% EGGLESS
+    </p>
+
+    <h1>
+      Small Bites
+      <span>♥</span>
+      <br>
+      Big Happiness
+    </h1>
+
+    <p class="hero-description">
+      Delicious homemade desserts,
+      <br>
+      freshly made with love just for you.
+    </p>
+
+    <div class="hero-buttons">
+
+      <button
+        class="hero-menu-btn"
+        onclick="scrollToMenu()">
+        Explore Menu 🍰
+      </button>
+
+      <button
+        class="hero-waffle-btn"
+        onclick="scrollToMenu()">
+        🧇 Try Our Waffles
+      </button>
+
+    </div>
+
+    <div class="hero-note">
+      ✦ Made fresh for every order ✦
+    </div>
+
+  </div>
+
+</section>
+<!-- CATEGORY FILTER -->
+
+<div class="category-filter">
+
+  <button
+    class="category-btn active"
+    onclick="showCategory('all')">
+    🍰 All
+  </button>
+
+  <button
+    class="category-btn"
+    onclick="showCategory('cheesecake')">
+    🍰 Cheesecakes
+  </button>
+
+  <button
+    class="category-btn"
+    onclick="showCategory('waffle')">
+    🧇 Waffles
+  </button>
+
+</div>
+<!-- MENU -->
+
+<section id="menu" class="menu-section">
+
+  <h2 class="menu-title">
+  <span>Our Cheesecakes</span>
+  <small>Fresh • Eggless • Made with Love ♡</small>
+</h2>
+
+  <div class="product-grid">
+
+
+    <!-- OREO CHEESECAKE -->
+
+    <div class="product-card">
+
+      <img
+        src="images/oreo-cheesecake.png"
+        alt="Oreo Cheesecake">
+
+      <h3>
+        Oreo Cheesecake
+      </h3>
+
+      <p class="price">
+        ₹89
+      </p>
+
+      <button
+  class="add-cart-btn"
+  onclick="addToCart('oreo Cheesecake', 89)">
+  Add to Cart
+</button>
+
+    </div>
+
+
+    <!-- STRAWBERRY CHEESECAKE -->
+
+    <div class="product-card">
+
+      <img
+        src="images/strawberry-cheesecake.png"
+        alt="Strawberry Cheesecake">
+
+      <h3>
+        Strawberry Cheesecake
+      </h3>
+
+      <p class="price">
+        ₹89
+      </p>
+
+      <button
+  class="add-cart-btn"
+  onclick="addToCart('Strawberry p
+  Cheesecake', 89)">
+  Add to Cart
+</button>
+
+    </div>
+
+
+    <!-- CHOCOLATE CHEESECAKE -->
+
+    <div class="product-card">
+
+      <img
+        src="images/chocolate-cheesecake.png"
+        alt="Chocolate Cheesecake">
+
+      <h3>
+        Chocolate Cheesecake
+      </h3>
+
+      <p class="price">
+        ₹79
+      </p>
+      <button
+  class="add-cart-btn"
+  onclick="addToCart('Chochlate Cheesecake', 79)">
+  Add to Cart
+
+    </div>
+
+
+    <!-- BLUEBERRY CHEESECAKE -->
+
+    <div class="product-card">
+
+      <img
+        src="images/blueberry-cheesecake.png"
+        alt="Blueberry Cheesecake">
+
+      <h3>
+        Blueberry Cheesecake
+      </h3>
+
+      <p class="price">
+        ₹79
+      </p>
+
+      <button
+        
+        class="add-cart-btn"
+        onclick="addToCart('Blueberry Cheesecake', 79)">
+        Add to Cart
+      </button>
+
+    </div>
+
+
+    <!-- LOTUS CHEESECAKE -->
+
+    <div class="product-card">
+
+      <img
+        src="images/lotus-biscoff-cheesecake.png"
+        alt="Lotus Biscoff Cheesecake">
+
+      <h3>
+        Lotus Biscoff Cheesecake
+      </h3>
+
+      <p class="price">
+        ₹79
+      </p>
+
+      <button
+        
+  class="add-cart-btn"
+  onclick="addToCart('Lotus Biscoff Cheesecake', 79)">
+        Add to Cart
+      </button>
+
+    </div>
+
+  </div>
+    <!-- WAFFLES -->
+
+  <h2 class="menu-title">
+  <span>Our Waffles</span>
+  <small>Fresh • Crispy • Made with Love ♡</small>
+</h2>
+
+  <div class="product-grid">
+
+
+    <!-- CHOCOLATE WAFFLE -->
+
+    <div class="product-card">
+
+      <img
+        src="images/chocolate-waffle.png"
+        alt="Chocolate Waffle">
+
+      <h3>
+        Chocolate Waffle
+      </h3>
+
+      <p class="price">
+        ₹59
+      </p>
+
+      <button
+        
+  class="add-cart-btn"
+  onclick="addToCart('Chocolate Waffle', 59)">
+        Add to Cart
+      </button>
+
+    </div>
+
+
+    <!-- OREO WAFFLE -->
+
+    <div class="product-card">
+
+      <img
+        src="images/oreo-waffle.png"
+        alt="Oreo Waffle">
+
+      <h3>
+        Oreo Waffle
+      </h3>
+
+      <p class="price">
+        ₹69
+      </p>
+
+      <button
+        
+  class="add-cart-btn"
+  onclick="addToCart('Oreo Waffle', 69)">
+        Add to Cart
+      </button>
+
+    </div>
+
+
+    <!-- STRAWBERRY WAFFLE -->
+
+    <div class="product-card">
+
+      <img
+        src="images/strawberry-waffle.png"
+        alt="Strawberry Waffle">
+
+      <h3>
+        Strawberry Waffle
+      </h3>
+
+      <p class="price">
+        ₹69
+      </p>
+
+      <button
+        
+  class="add-cart-btn"
+  onclick="addToCart('Strawberry Waffle', 69)">
+        Add to Cart
+      </button>
+
+    </div>
+
+
+    <!-- LOTUS WAFFLE -->
+
+    <div class="product-card">
+
+      <img
+        src="images/lotus-biscoff-waffle.png"
+        alt="Lotus Biscoff Waffle">
+
+      <h3>
+        Lotus Biscoff Waffle
+      </h3>
+
+      <p class="price">
+        ₹79
+      </p>
+
+      <button
+        
+  class="add-cart-btn"
+  onclick="addToCart('Lotus Biscoff Waffle', 79)">
+        Add to Cart
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- CART -->
+
+<div id="cartOverlay" class="cart-overlay">
+
+  <div class="cart-box">
+
+    <div class="cart-header">
+
+      <h2>
+        Your Cart 🛒
+      </h2>
+
+      <button 
+  class="add-cart-btn"
+  onclick="closeCart()">
+        close card
+      </button>
+
+    </div>
+
+
+    <div id="cartItems"></div>
+
+
+    <div class="cart-summary">
+
+      <div>
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">₹0</strong>
+      </div>
+
+      <div>
+        <span>Delivery</span>
+        <strong id="deliveryFee">₹0</strong>
+      </div>
+
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+
+    </div>
+
+      
+    <button
+  class="checkout-btn"
+  onclick="goToCheckout()">
+  Proceed to Checkout →
+</button>
+  </div>
+
+</div>
+<!-- CHECKOUT -->
+
+<section id="checkoutSection" class="checkout-section">
+
+  <div class="checkout-box">
+
+    <h2>
+      Checkout 🩷
+    </h2>
+
+    <p>
+      Enter your delivery details
+    </p>
+
+
+    <label>
+      Full Name
+    </label>
+
+    <input
+      id="customerName"
+      type="text"
+      placeholder="Your name"
+    >
+
+
+    <label>
+      Mobile Number
+    </label>
+
+    <input
+      id="customerPhone"
+      type="tel"
+      maxlength="10"
+      placeholder="10-digit mobile number"
+    >
+
+
+    <label>
+      Full Address
+    </label>
+
+    <textarea
+      id="customerAddress"
+      placeholder="House no., street, area, city"
+    ></textarea>
+
+
+    <label>
+      Landmark
+    </label>
+
+    <input
+      id="customerLandmark"
+      type="text"
+      placeholder="Nearby landmark"
+    >
+    <div class="payment-box">
+
+  <h3>💳 Choose Payment Method</h3>
+
+  <p class="payment-note">
+    Select how you want to pay
+  </p>
+
+  <div class="payment-options">
+
+    <label class="payment-card">
+      <input type="radio" name="payment" value="upi">
+      <span class="payment-icon">📱</span>
+      <span class="payment-text">
+        <strong>UPI</strong>
+        <small>Google Pay • PhonePe • Paytm</small>
+      </span>
+    </label>
+
+    <label class="payment-card">
+      <input type="radio" name="payment" value="card">
+      <span class="payment-icon">💳</span>
+      <span class="payment-text">
+        <strong>Debit / Credit Card</strong>
+        <small>Pay securely by card</small>
+      </span>
+    </label>
+
+    <label class="payment-card">
+      <input type="radio" name="payment" value="netbanking">
+      <span class="payment-icon">🏦</span>
+      <span class="payment-text">
+        <strong>Net Banking</strong>
+        <small>Pay through your bank</small>
+      </span>
+    </label>
+
+    <label class="payment-card">
+      <input type="radio" name="payment" value="cod">
+      <span class="payment-icon">💵</span>
+      <span class="payment-text">
+        <strong>Cash on Delivery</strong>
+        <small>Pay when your order arrives</small>
+      </span>
+    </label>
+
+  </div>
+
+</div>""
+    
+
+
+    <button
+      onclick="placeOrder()"
+      class="place-order-button">
+
+      Place Order 🍰
+
+    </button>
+
+  </div>
+
+</section>
+<!-- SUCCESS -->
+
+<section id="successSection" class="success-section">
+
+  <div class="success-box">
+
+    <div class="success-icon">
+      🎉
+    </div>
+
+    <h1>
+      Thank You! 🩷
+    </h1>
+
+    <p>
+      Your Someli Treats order has been received.
+    </p>
+
+
+    <div class="order-number">
+
+      <span>
+        YOUR ORDER NUMBER
+      </span>
+
+      <strong id="orderNumber">
+        ST000000
+      </strong>
+
+    </div>
+
+
+    <p class="success-note">
+      We'll prepare your desserts fresh with love ♡
+    </p>
+
+
+    <button
+      onclick="sendWhatsAppOrder()"
+      class="whatsapp-btn">
+
+      💬 Send Order on WhatsApp
+
+    </button>
+
+
+    <button onclick="scrollToMenu()">
+      Order More 🍰
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="site-footer">
+
+  <div class="footer-logo">
+    SOMELI TREATS
+  </div>
+
+  <p class="footer-tagline">
+    Small Bites ♥ Big Happiness
+  </p>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-info">
+    <span>🍰 100% Eggless</span>
+    <span>♡ Homemade & Fresh</span>
+    <span>📍 Hardoi, U.P.</span>
+  </div>
+
+  <p class="footer-note">
+    Freshly made with love for every sweet moment.
+  </p>
+
+  <p class="footer-copy">
+    © 2026 Someli Treats • All Rights Reserved
+  </p>
+
+</footer>
+<!-- JAVASCRIPT -->
+
+<script>
+
+let cart = [];
+
+function addToCart(name, price) {
+
+  let item = cart.find(function(x) {
+    return x.name === name;
+  });
+
+  if (item) {
+    item.quantity++;
+  } else {
+    cart.push({
+      name: name,
+      price: price,
+      quantity: 1
+    });
+  }
+
+  updateCart();
+}
+
+function updateCart() {
+
+  let box = document.getElementById("cartItems");
+  let count = document.getElementById("cartCount");
+
+  let subtotal = 0;
+  let quantity = 0;
+
+  cart.forEach(function(item) {
+
+    subtotal += item.price * item.quantity;
+    quantity += item.quantity;
+
+  });
+
+  count.textContent = quantity;
+
+  if (cart.length === 0) {
+
+    box.innerHTML = `
+      <div class="empty-cart">
+        <div style="font-size:42px">🍰</div>
+        <h3>Your cart is empty</h3>
+        <p>Add something sweet ♡</p>
+      </div>
+    `;
+
+  } else {
+
+    box.innerHTML = cart.map(function(item, i) {
+
+      return `
+        <div class="cart-item">
+
+          <div class="cart-item-top">
+
+            <div>
+              <div class="cart-item-name">
+                ${item.name}
+              </div>
+
+              <div class="cart-item-price">
+                ₹${item.price} each
+              </div>
+            </div>
+
+            <strong>
+              ₹${item.price * item.quantity}
+            </strong>
+
+          </div>
+
+          <div class="quantity-controls">
+
+            <button onclick="changeQuantity(${i}, -1)">
+              −
+            </button>
+
+            <strong>
+              ${item.quantity}
+            </strong>
+
+            <button onclick="changeQuantity(${i}, 1)">
+              +
+            </button>
+
+            <button onclick="removeItem(${i})">
+              Remove
+            </button>
+
+          </div>
+
+        </div>
+      `;
+
+    }).join("");
+
+  }
+
+  document.getElementById("cartSubtotal").textContent =
+    "₹" + subtotal;
+
+  document.getElementById("deliveryFee").textContent =
+    cart.length ? "₹30" : "₹0";
+
+  document.getElementById("cartTotal").textContent =
+    cart.length ? "₹" + (subtotal + 30) : "₹0";
+}
+function changeQuantity(index, amount) {
+
+  cart[index].quantity += amount;
+
+  if (cart[index].quantity <= 0) {
+    cart.splice(index, 1);
+  }
+
+  updateCart();
+}
+
+
+function removeItem(index) {
+
+  cart.splice(index, 1);
+
+  updateCart();
+}
+
+
+function openCart() {
+
+  document.getElementById("cartOverlay")
+    .classList.add("active");
+
+  updateCart();
+}
+
+
+function closeCart() {
+
+  document.getElementById("cartOverlay")
+    .classList.remove("active");
+}
+
+
+function scrollToMenu() {
+
+  document.getElementById("menu")
+    .scrollIntoView({
+      behavior: "smooth"
+    });
+}
+
+
+function goToCheckout() {
+
+  if (cart.length === 0) {
+
+    alert("Please add a dessert first 🍰");
+
+    return;
+  }
+
+  closeCart();
+
+  document.getElementById("checkoutSection")
+    .classList.add("active");
+
+  document.getElementById("checkoutSection")
+    .scrollIntoView({
+      behavior: "smooth"
+    });
+}
+function placeOrder() {
+
+  if (cart.length === 0) {
+    alert("Your cart is empty 🍰");
+    return;
+  }
+
+  let name = document.getElementById("customerName").value.trim();
+  let phone = document.getElementById("customerPhone").value.trim();
+  let address = document.getElementById("customerAddress").value.trim();
+  let landmark = document.getElementById("customerLandmark").value.trim();
+
+  if (!name || !phone || !address || !landmark) {
+    alert("Please fill all required details 🩷");
+    return;
+  }
+
+  if (phone.length !== 10 || isNaN(phone)) {
+    alert("Please enter a valid 10-digit mobile number 📱");
+    return;
+  }
+
+  let orderNumber =
+    "ST" + Math.floor(100000 + Math.random() * 900000);
+
+  let subtotal = 0;
+
+  cart.forEach(function(item) {
+    subtotal += item.price * item.quantity;
+  });
+
+  let delivery = 30;
+  let total = subtotal + delivery;
+
+  let orderData = {
+    orderNumber: orderNumber,
+    customerName: name,
+    phone: phone,
+    address: address,
+    landmark: landmark,
+    items: cart,
+    subtotal: subtotal,
+    delivery: delivery,
+    total: total,
+    date: new Date().toLocaleString()
+  };
+
+  localStorage.setItem(
+    "someliLatestOrder",
+    JSON.stringify(orderData)
+  );
+
+  document.getElementById("orderNumber").textContent =
+    orderNumber;
+
+  document.getElementById("checkoutSection")
+    .classList.remove("active");
+
+  document.getElementById("successSection")
+    .classList.add("active");
+
+  cart = [];
+
+  updateCart();
+
+  document.getElementById("successSection")
+    .scrollIntoView({
+      behavior: "smooth"
+    });
+}
+function sendWhatsAppOrder() {
+
+  let savedOrder =
+    localStorage.getItem("someliLatestOrder");
+
+  if (!savedOrder) {
+
+    alert("Order details not found 🥲");
+
+    return;
+  }
+
+  let order = JSON.parse(savedOrder);
+
+  let message =
+    "🍰 SOMELI TREATS - NEW ORDER 🍰\n\n" +
+
+    "🧾 Order: " + order.orderNumber + "\n" +
+
+    "👤 Name: " + order.customerName + "\n" +
+
+    "📱 Phone: " + order.phone + "\n" +
+
+    "📍 Address: " + order.address + "\n" +
+
+    "🏠 Landmark: " + order.landmark + "\n\n" +
+
+    "🍰 ITEMS:\n";
+
+  order.items.forEach(function(item) {
+
+    message +=
+      "• " + item.name +
+      " × " + item.quantity +
+      " = ₹" +
+      (item.price * item.quantity) +
+      "\n";
+
+  });
+
+  message +=
+    "\n💰 Subtotal: ₹" + order.subtotal +
+
+    "\n🚚 Delivery: ₹" + order.delivery +
+
+    "\n💵 TOTAL: ₹" + order.total;
+
+
+  let whatsappURL =
+    "https://wa.me/918840486505?text=" +
+    encodeURIComponent(message);
+
+
+  window.open(whatsappURL, "_blank");
+}
+function showCategory(category) {
+
+  let products = document.querySelectorAll(".product-card");
+  let buttons = document.querySelectorAll(".category-btn");
+
+  buttons.forEach(function(button) {
+    button.classList.remove("active");
+  });
+
+  if (category === "all") {
+    buttons[0].classList.add("active");
+  }
+
+  if (category === "cheesecake") {
+    buttons[1].classList.add("active");
+  }
+
+  if (category === "waffle") {
+    buttons[2].classList.add("active");
+  }
+
+  products.forEach(function(product) {
+
+    let name = product.querySelector("h3").textContent.toLowerCase();
+
+    if (category === "all") {
+      product.style.display = "";
+    }
+
+    else if (
+      category === "cheesecake" &&
+      name.includes("cheesecake")
+    ) {
+      product.style.display = "";
+    }
+
+    else if (
+      category === "waffle" &&
+      name.includes("waffle")
+    ) {
+      product.style.display = "";
+    }
+
+    else {
+      product.style.display = "none";
+    }
+
+  });
+}
+updateCart();
+
+</script>
+
+</body>
+</html>
